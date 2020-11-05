@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { changeTest } from '../actions'
+import Rules from "../components/Rules";
+import List from "../components/List";
+import Loader from "../components/Loader";
 
 class App extends Component {
 
@@ -15,6 +18,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Rules/>
+        <List/>
+        <Loader/>
         {this.props.test}<br/>
         <button onClick={this.click.bind(this)}>Change</button>
       </div>
