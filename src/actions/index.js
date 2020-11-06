@@ -36,10 +36,17 @@ export const loadPersons= () => {
     }
 };
 
+export const sort = ()=>{
+  return dispatch=>{
+      dispatch({type:SET_SORT});
+      dispatch(sortpersons());
+  }
+};
 export const addPersons = list=> ({
     type:ADD_ITEMS,
     payload:list
 });
+
 
 export const startLoad = ()=>({
     type: SET_LOADER,
@@ -59,3 +66,4 @@ export const changeNItems = (count)=>({
     type: SET_ITEMS_PP,
     payload: count
 });
+

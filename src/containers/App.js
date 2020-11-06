@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { loadPersons, changeNItems } from '../actions'
+import { loadPersons, changeNItems,sort } from '../actions'
 import Rules from "../components/Rules";
 import List from "../components/List";
 import Loader from "../components/Loader";
@@ -18,7 +18,9 @@ class App extends Component {
       this.props.dispatch(changeNItems(event.target.value));
       this.props.dispatch(loadPersons())
   }
-  sort(){}
+  sort(){
+      this.props.dispatch(sort());
+  }
   render() {
     return (
       <div>

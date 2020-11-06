@@ -25,15 +25,17 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
     case ADD_SORTED_ITEMS:{
         let sortList;
         switch (state.sort) {
-            case NOT_SORT: sortList = state.list ;
+            case NOT_SORT:
+                sortList = state.list;
+                break;
             case SORT_TO_BIG:
                 sortList = state.list.sort(
                     (el,el2)=>(new Date(el.timestamp)).getTime() - (new Date(el2.timestamp)).getTime()
-                ) ;
+                ) ; break;
             case SORT_TO_SMALL:
                 sortList = state.list.sort(
-                    (el,el2)=>(new Date(el.timestamp)).getTime() - (new Date(el2.timestamp)).getTime() * -1
-                ) ;
+                    (el,el2)=>{return ((new Date(el.timestamp)).getTime() - (new Date(el2.timestamp)).getTime()) * -1}
+                ) ; break;
         }
         return {...state,sortList}
     }
@@ -43,7 +45,7 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
       switch(state.sort){
         case NOT_SORT: sort = SORT_TO_BIG; break;
         case SORT_TO_BIG: sort = SORT_TO_SMALL; break;
-        case SORT_TO_SMALL: sort = NOT_SORT; break;
+        case SORT_TO_SMALL: sort = SORT_TO_BIG; break;
       }
       return {...state, sort:sort};
     }

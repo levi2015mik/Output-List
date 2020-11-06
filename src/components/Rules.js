@@ -12,6 +12,6 @@ export default function Rules(props) {
             <option value={100}>100</option>
             <option value={500}>500</option>
         </select>
-        sort by: <button>timestamp</button>
+        sort by: <button onClick={props.onSort}>timestamp {props.sort}</button>
     </div>)
 }
