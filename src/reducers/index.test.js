@@ -32,7 +32,7 @@ describe('reducer persons',()=>{
 
     test("default load",()=>{
         const state = reducer({},{type:"EMPTY"});
-        expect(state.persons).toEqual({ list: [], sort: 0, nItems: 10, loader: 0 })
+        expect(state.persons).toEqual({ list: [], sort: 0, nItems: 10, loader: 0, "sortList": [] })
     });
 
     test("ADD_ITEMS",()=>{
@@ -49,7 +49,7 @@ describe('reducer persons',()=>{
         expect(state.persons.sort).toBe(SORT_TO_SMALL);
 
         state = reducer(state,{type:SET_SORT});
-        expect(state.persons.sort).toBe(NOT_SORT);
+        expect(state.persons.sort).toBe(SORT_TO_BIG);
     });
 
     test("SET_ITEMS_PP",()=>{

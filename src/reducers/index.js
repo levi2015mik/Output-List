@@ -10,14 +10,7 @@ export const NOT_SORT = 0;
 export const SORT_TO_BIG = 1;
 export const SORT_TO_SMALL = 2;
 
-const testData = (state = {test:"My test data"}, action) => {
-  switch (action.type) {
-    case CHANGE_TEST:
-      return {...state,test: action.value};
-    default:
-      return state
-  }
-};
+
 const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},action)=>{
   switch (action.type) {
     case ADD_ITEMS: return {...state, list: action.payload};
@@ -66,7 +59,6 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
 };
 
 const rootReducer = combineReducers({
-  testData,
   persons
 });
 
