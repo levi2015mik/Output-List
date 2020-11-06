@@ -29,7 +29,7 @@ class App extends Component {
             onSort={this.sort.bind(this)}
         />
         <List persons={this.props.persons.sortList}/>
-        <Loader/>
+        <Loader status={this.props.persons.loader}/>
       </div>
     )
   }
@@ -38,7 +38,6 @@ class App extends Component {
 const mapStateToProps = state => {
 
   return {
-    test:state.testData.test,
     persons:state.persons
   }
 };
