@@ -3,12 +3,14 @@ import React from "react";
 export default function Rules(props) {
     return (<div>
         Output of:
-        <select>
-            <option>10</option>
-            <option>20</option>
-            <option>50</option>
-            <option>100</option>
-            <option>500</option>
+        <select value={props.nItems} onChange={props.onChange}>
+            <option value={1}>1</option>
+            <option value={5}>5</option>
+            <option value={10}>10</option>
+            <option value={20}>20</option>
+            <option value={50}>50</option>
+            <option value={100}>100</option>
+            <option value={500}>500</option>
         </select>
         sort by: <button>timestamp</button>
     </div>)

@@ -54,3 +54,8 @@ export const endLoad = ()=>({
 export const sortpersons = ()=>({
     type:ADD_SORTED_ITEMS
 });
+
+export const changeNItems = (count)=>({
+    type: SET_ITEMS_PP,
+    payload: count
+});
