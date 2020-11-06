@@ -1,6 +1,12 @@
 import reducer from './index'
 import {
-    CHANGE_TEST, SET_SORT, ADD_ITEMS, SET_ITEMS_PP, SET_LOADER
+    NOT_SORT,
+    SORT_TO_BIG,
+    SORT_TO_SMALL
+} from './index'
+
+import {
+    SET_SORT, ADD_ITEMS, SET_ITEMS_PP, SET_LOADER, ADD_ERROR, DELETE_ERROR
 } from '../actions'
 
 const templatePersons = [{
@@ -33,7 +39,36 @@ describe('reducer persons',()=>{
         const state = reducer({},{type:ADD_ITEMS,payload:templatePersons});
         expect(state.persons.list.length).toBe(2);
         expect(state.persons.list[0].id).toBe(503);
-    })
+    });
+
+    test("ADD_SORT",()=>{
+        let state = reducer({},{type:SET_SORT});
+        expect(state.persons.sort).toBe(SORT_TO_BIG);
+
+        state = reducer(state,{type:SET_SORT});
+        expect(state.persons.sort).toBe(SORT_TO_SMALL);
+
+        state = reducer(state,{type:SET_SORT});
+        expect(state.persons.sort).toBe(NOT_SORT);
+    });
+
+    test("SET_ITEMS_PP",()=>{
+        const state = reducer({},{type:SET_ITEMS_PP,payload: 20});
+        expect(state.persons.nItems).toBe(20);
+    });
+
+    test("SET_LOADER",()=>{
+        const state = reducer({},{type:SET_LOADER,payload: 20});
+        expect(state.persons.loader).toBe(20);
+    });
+
+    test("ERROR",()=>{
+        let state = reducer({},{type:ADD_ERROR,payload: {code:404,description:"Not found"}});
+        expect(state.persons.error).toEqual({code:404,description:"Not found"});
+        state = reducer(state,{type:DELETE_ERROR});
+        expect(state.persons.error).toBeUndefined()
+    });
+
 
 
 });

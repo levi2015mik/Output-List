@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux'
 import {
- CHANGE_TEST, SET_SORT, ADD_ITEMS, SET_ITEMS_PP, SET_LOADER
+  CHANGE_TEST, SET_SORT, ADD_ITEMS,
+  SET_ITEMS_PP, SET_LOADER,
+  ADD_ERROR, DELETE_ERROR
 } from '../actions'
 
 // Sort const for reducer persons
-const NOT_SORT = 0;
-const SORT_TO_BIG = 1;
-const SORT_TO_SMALL = 1;
+export const NOT_SORT = 0;
+export const SORT_TO_BIG = 1;
+export const SORT_TO_SMALL = 2;
 
 const testData = (state = {test:"My test data"}, action) => {
   switch (action.type) {
@@ -19,6 +21,7 @@ const testData = (state = {test:"My test data"}, action) => {
 const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0},action)=>{
   switch (action.type) {
     case ADD_ITEMS: return {...state, list: action.payload};
+
     case SET_SORT: {
       let sort;
       switch(state.sort){
@@ -28,8 +31,18 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0},action)=>{
       }
       return {...state, sort:sort};
     }
+
     case SET_ITEMS_PP: return {...state, nItems: action.payload};
+
     case SET_LOADER: return {...state,loader: action.payload};
+
+    case ADD_ERROR: return {...state,error: action.payload};
+
+    case DELETE_ERROR: {
+      let stateCpy =  {...state};
+      delete stateCpy.error;
+      return stateCpy;
+    }
     default: return state
   }
 };
