@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6ee90fe6-d123-46af-9451-6ae4dc741fb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/El.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/El.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604602230176</updated>
       <workItem from="1604602231848" duration="3735000" />
-      <workItem from="1604615356901" duration="13890000" />
+      <workItem from="1604615356901" duration="15754000" />
     </task>
     <task id="LOCAL-00001" summary="added reducer persons">
       <created>1604615450021</created>
@@ -167,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604655063530</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add sorted persons list">
+      <created>1604657502278</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604657502278</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +196,7 @@
     <MESSAGE value="added reducer persons" />
     <MESSAGE value="added cases to reducer persons + tests" />
     <MESSAGE value="create thunck loadPersons" />
-    <option name="LAST_COMMIT_MESSAGE" value="create thunck loadPersons" />
+    <MESSAGE value="add sorted persons list" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sorted persons list" />
   </component>
 </project>

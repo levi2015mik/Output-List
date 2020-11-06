@@ -18,7 +18,7 @@ const testData = (state = {test:"My test data"}, action) => {
       return state
   }
 };
-const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0},action)=>{
+const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},action)=>{
   switch (action.type) {
     case ADD_ITEMS: return {...state, list: action.payload};
 

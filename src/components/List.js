@@ -1,7 +1,10 @@
 import React from "react";
+import El from "./El";
 
 export default function List(props) {
     return (<div>
-        {JSON.stringify(props.persons)}
+        {props.persons.map(person=>(
+            <El person={person}/>
+        ))}
     </div>)
 }
