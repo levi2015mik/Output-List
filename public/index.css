@@ -13,11 +13,20 @@ body{
 .rules select, .rules button {
     margin-left: 1em;
 }
-
+.rules button {
+    vertical-align: middle;
+}
+.rules button img {
+    width: 25px;
+    height: 25px;
+}
 .list{
     overflow: auto;
-    height: 90vh;
+    height: 80vh;
     padding: 0 1em;
+}
+.el{
+    background: white;
 }
 .el span {
     font-weight: bold;
@@ -38,4 +47,9 @@ body{
     border: solid 2px indianred;
     padding: 1em;
     background: #fff;
+}
+
+footer{
+    margin: 1em;
+    font-size: 1.2em;
 }

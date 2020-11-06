@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function Rules(props) {
+    // коллекция иконок для кнопки сортировки
+    const sortIcons = ['icons8-sort.png','icons8-sort-to-up.png','icons8-sort-to-down.png'];
+
     return (<div className={"rules"}>
         <div>Output of:
             <select value={props.nItems} onChange={props.onChange}>
@@ -14,7 +17,7 @@ export default function Rules(props) {
             </select>
         </div>
         <div>
-            sort by: <button onClick={props.onSort}>timestamp {props.sort}</button>
+            sort by: timestamp <button onClick={props.onSort}><img src={sortIcons[props.sort]}/></button>
         </div>
     </div>)
 }

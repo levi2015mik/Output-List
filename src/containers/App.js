@@ -32,6 +32,7 @@ class App extends Component {
         />
         <List persons={this.props.persons.sortList}/>
         <Loader status={this.props.persons.loader}/>
+          <footer>иконки от <a target="_blank" href="https://icons8.ru">Icons8</a></footer>
       </div>
     )
   }

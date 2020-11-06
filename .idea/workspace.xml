@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ee90fe6-d123-46af-9451-6ae4dc741fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/loader.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons8-sort-to-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons8-sort-to-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons8-sort.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/El.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/El.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604602230176</updated>
       <workItem from="1604602231848" duration="3735000" />
-      <workItem from="1604615356901" duration="23800000" />
+      <workItem from="1604615356901" duration="25883000" />
     </task>
     <task id="LOCAL-00001" summary="added reducer persons">
       <created>1604615450021</created>
@@ -216,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604664157448</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added style to elements">
+      <created>1604675585435</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604675585435</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +250,7 @@
     <MESSAGE value="set count to output list" />
     <MESSAGE value="activate loader" />
     <MESSAGE value="Added sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sort" />
+    <MESSAGE value="added style to elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="added style to elements" />
   </component>
 </project>
