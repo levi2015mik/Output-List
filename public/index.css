@@ -1,0 +1,41 @@
+body{
+    margin:0;
+}
+.rules {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    border-bottom: solid 2px indianred;
+    padding: 1.4em 1em;
+    background: ghostwhite;
+}
+
+.rules select, .rules button {
+    margin-left: 1em;
+}
+
+.list{
+    overflow: auto;
+    height: 90vh;
+    padding: 0 1em;
+}
+.el span {
+    font-weight: bold;
+}
+
+.loader__wrapper {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-around}
+.loader__wrapper>div{
+    width: fit-content;
+    margin: 30vh auto;
+    border: solid 2px indianred;
+    padding: 1em;
+    background: #fff;
+}
