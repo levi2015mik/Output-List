@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div>
         <Rules onChange={this.reload.bind(this)}/>
-        <List persons={this.props.persons.list}/>
+        <List persons={this.props.persons.sortList}/>
         <Loader/>
         {this.props.test}<br/>
         <button onClick={this.click.bind(this)}>Change</button>
