@@ -8,6 +8,7 @@ export const ADD_SORTED_ITEMS = 'ADD_SORTED_ITEMS';
 export const SET_LOADER = 'SET_LOADER';
 export const ADD_ERROR = 'ADD_ERROR';
 export const DELETE_ERROR = 'DELETE_ERROR';
+export const CREATE_HTTP_ERROR = 'CREATE_HTTP_ERROR';
 
 const URL = `http://www.filltext.com/?id=%7Bnumber%7C1000%7D&firstName=%7BfirstName%7D&lastName=%7BlastName%7D&email=%7Bemail%7D&phone=%7Bphone%7C(xxx)xxx-xx-xx%7D&message=%7Blorem%7C32%7D&timestamp={date}&delay=3`;
 const wait = async (time)=>new Promise(resolve=>setTimeout(resolve,time));
@@ -21,7 +22,9 @@ export const changeTest = value =>({
  */
 export const loadPersons= () => {
     return async (dispatch,getState)=>{
-        const url = `${URL}&rows=${getState().persons.nItems}`;
+        const persons = getState().persons;
+        let url = `${URL}&rows=${persons.nItems}`;
+        if(persons.httpError) url +=`&err=${persons.httpError}`;
         dispatch(startLoad());
         try {
             let list = await axios.get(url);
@@ -31,7 +34,6 @@ export const loadPersons= () => {
         } catch (e) {
             dispatch(endLoad());
             const error = {message:e.message};
-            if(e.code) error.code = e.code;
             dispatch(addError(error));
             await wait(5000);
             if(e.message === "Network Error") dispatch(loadPersons());
@@ -79,5 +81,10 @@ export const addError = (error)=>({
 
 export const deleteError = ()=>({
     type:DELETE_ERROR
+});
+
+export const addHttpError = (error)=>({
+    type: CREATE_HTTP_ERROR,
+    payload:error
 });
 

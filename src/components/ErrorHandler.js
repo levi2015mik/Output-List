@@ -9,7 +9,6 @@ export default function ErrorHandler(props) {
         >
             <div>
                 <img src={"err.png"}/>
-                <span>{props.error && props.error.code}</span>
                 <p>{props.error && props.error.message}</p>
             </div>
         </div>

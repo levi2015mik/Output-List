@@ -20,7 +20,7 @@ export default function Rules(props) {
             sort by: timestamp <button onClick={props.onSort}><img src={sortIcons[props.sort]}/></button>
         </div>
         <div>
-            <label>Generate error query <input type={"checkbox"}/></label>
+            <label>Generate error query <input onChange={props.createError} type={"checkbox"}/></label>
         </div>
     </div>)
 }

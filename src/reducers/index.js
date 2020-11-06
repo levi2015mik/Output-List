@@ -2,7 +2,8 @@ import { combineReducers } from 'redux'
 import {
   CHANGE_TEST, SET_SORT, ADD_ITEMS,
   SET_ITEMS_PP, SET_LOADER,
-  ADD_ERROR, DELETE_ERROR, ADD_SORTED_ITEMS
+  ADD_ERROR, DELETE_ERROR, ADD_SORTED_ITEMS,
+  CREATE_HTTP_ERROR
 } from '../actions'
 
 // Sort const for reducer persons
@@ -54,6 +55,7 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
       delete stateCpy.error;
       return stateCpy;
     }
+      case CREATE_HTTP_ERROR: return {...state,httpError:action.payload};
     default: return state
   }
 };
