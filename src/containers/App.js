@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { changeTest } from '../actions'
+import { changeTest,addPersons,loadPersons } from '../actions'
 import Rules from "../components/Rules";
 import List from "../components/List";
 import Loader from "../components/Loader";
@@ -8,6 +8,7 @@ import Loader from "../components/Loader";
 class App extends Component {
 
   componentDidMount() {
+      this.props.dispatch(loadPersons())
   }
 
   componentDidUpdate(prevProps) {
@@ -15,11 +16,13 @@ class App extends Component {
   click(){
     this.props.dispatch(changeTest("New data"));
   }
+
+  reload(){}
   render() {
     return (
       <div>
-        <Rules/>
-        <List/>
+        <Rules onChange={this.reload.bind(this)}/>
+        <List persons={this.props.persons.list}/>
         <Loader/>
         {this.props.test}<br/>
         <button onClick={this.click.bind(this)}>Change</button>
@@ -31,7 +34,8 @@ class App extends Component {
 const mapStateToProps = state => {
 
   return {
-    test:state.testData.test
+    test:state.testData.test,
+    persons:state.persons
   }
 };
 

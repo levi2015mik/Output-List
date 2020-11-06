@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ee90fe6-d123-46af-9451-6ae4dc741fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6ee90fe6-d123-46af-9451-6ae4dc741fb3" name="Default Changelist" comment="create thunck load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -57,19 +59,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Jest.reducer persons.ERROR">
-    <configuration name="reducer persons" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/reducers/index.test.js" />
-      <test-names>
-        <test-name value="reducer persons" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="reducer persons.ADD_SORT" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -126,13 +115,23 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.reducer persons.ERROR" />
         <item itemvalue="Jest.reducer persons.SET_LOADER" />
         <item itemvalue="Jest.reducer persons.SET_ITEMS_PP" />
         <item itemvalue="Jest.reducer persons.ADD_SORT" />
-        <item itemvalue="Jest.reducer persons" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604602230176</updated>
       <workItem from="1604602231848" duration="3735000" />
-      <workItem from="1604615356901" duration="4523000" />
+      <workItem from="1604615356901" duration="11523000" />
     </task>
     <task id="LOCAL-00001" summary="added reducer persons">
       <created>1604615450021</created>
@@ -156,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604615450021</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added cases to reducer persons + tests">
+      <created>1604644817267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604644817267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added reducer persons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added reducer persons" />
+    <MESSAGE value="added cases to reducer persons + tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cases to reducer persons + tests" />
   </component>
 </project>
