@@ -10,7 +10,7 @@ export const ADD_ERROR = 'ADD_ERROR';
 export const DELETE_ERROR = 'DELETE_ERROR';
 
 const URL = `http://www.filltext.com/?id=%7Bnumber%7C1000%7D&firstName=%7BfirstName%7D&lastName=%7BlastName%7D&email=%7Bemail%7D&phone=%7Bphone%7C(xxx)xxx-xx-xx%7D&message=%7Blorem%7C32%7D&timestamp={date}&delay=3`;
-
+const wait = async (time)=>new Promise(resolve=>setTimeout(resolve,time));
 export const changeTest = value =>({
   type: CHANGE_TEST,
   value
@@ -27,10 +27,15 @@ export const loadPersons= () => {
             let list = await axios.get(url);
             dispatch(addPersons(list.data));
             dispatch(sortpersons());
-        } catch (e) {
-            console.log(e)
-        } finally {
             dispatch(endLoad())
+        } catch (e) {
+            dispatch(endLoad());
+            const error = {message:e.message};
+            if(e.code) error.code = e.code;
+            dispatch(addError(error));
+            await wait(5000);
+            if(e.message === "Network Error") dispatch(loadPersons());
+            dispatch(deleteError());
         }
 
     }
@@ -65,5 +70,14 @@ export const sortpersons = ()=>({
 export const changeNItems = (count)=>({
     type: SET_ITEMS_PP,
     payload: count
+});
+
+export const addError = (error)=>({
+    type: ADD_ERROR,
+    payload:error
+});
+
+export const deleteError = ()=>({
+    type:DELETE_ERROR
 });
 

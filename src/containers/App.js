@@ -4,6 +4,7 @@ import { loadPersons, changeNItems,sort } from '../actions'
 import Rules from "../components/Rules";
 import List from "../components/List";
 import Loader from "../components/Loader";
+import ErrorHandler from "../components/ErrorHandler";
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
         />
         <List persons={this.props.persons.sortList}/>
         <Loader status={this.props.persons.loader}/>
+        <ErrorHandler error={this.props.persons.error}/>
           <footer>иконки от <a target="_blank" href="https://icons8.ru">Icons8</a></footer>
       </div>
     )

@@ -32,7 +32,7 @@ body{
     font-weight: bold;
 }
 
-.loader__wrapper {
+.loader__wrapper, .error__wrapper {
     position: absolute;
     top:0;
     left: 0;
@@ -40,15 +40,24 @@ body{
     height: 100%;
     background: rgba(0,0,0,0.5);
     display: flex;
-    justify-content: space-around}
-.loader__wrapper>div{
+    justify-content: space-around
+}
+
+.loader__wrapper>div, .error__wrapper>div {
     width: fit-content;
     margin: 30vh auto;
     border: solid 2px indianred;
     padding: 1em;
     background: #fff;
 }
-
+.error__wrapper>div{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+.error__wrapper>div>p, .error__wrapper>div>span{
+    margin: 0.3em;
+}
 footer{
     margin: 1em;
     font-size: 1.2em;
