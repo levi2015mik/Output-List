@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 export default function El(props) {
     const [details,setDetails] = useState(false);
-    const timestamp = (new Date(props.person.timestamp)).toLocaleString()
+    const timestamp = (new Date(props.person.timestamp)).toLocaleString();
     return (
         <div
             className={"el"}
