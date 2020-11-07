@@ -21,9 +21,11 @@ body{
     height: 25px;
 }
 .list{
-    overflow: auto;
-    height: 80vh;
     padding: 0 1em;
+}
+.btn-to-last{
+    position: fixed;
+    right: 3em;
 }
 .el{
     background: white;
