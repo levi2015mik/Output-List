@@ -6,6 +6,6 @@ export default function Loader(props) {
         style={{display:(props.status)? "block": "none"}}
         className={"loader__wrapper"}
     >
-        <div><img src={"loader.png"}/></div>
+        <div><img src={"loader.png"} alt={"load"}/></div>
     </div>)
 }

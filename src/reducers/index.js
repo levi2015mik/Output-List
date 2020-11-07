@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import {
-  CHANGE_TEST, SET_SORT, ADD_ITEMS,
+  SET_SORT, ADD_ITEMS,
   SET_ITEMS_PP, SET_LOADER,
   ADD_ERROR, DELETE_ERROR, ADD_SORTED_ITEMS,
   CREATE_HTTP_ERROR
@@ -30,6 +30,7 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
                 sortList = state.list.sort(
                     (el,el2)=>{return ((new Date(el.timestamp)).getTime() - (new Date(el2.timestamp)).getTime()) * -1}
                 ) ; break;
+            default: break;
         }
         return {...state,sortList}
     }
@@ -40,6 +41,7 @@ const persons = (state={list:[],sort:NOT_SORT,nItems:10,loader:0,sortList:[]},ac
         case NOT_SORT: sort = SORT_TO_BIG; break;
         case SORT_TO_BIG: sort = SORT_TO_SMALL; break;
         case SORT_TO_SMALL: sort = SORT_TO_BIG; break;
+        default: break;
       }
       return {...state, sort:sort};
     }

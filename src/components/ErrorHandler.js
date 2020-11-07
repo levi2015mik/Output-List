@@ -8,7 +8,7 @@ export default function ErrorHandler(props) {
             style={{display:(props.error)? "block": "none"}}
         >
             <div>
-                <img src={"err.png"}/>
+                <img src={"err.png"} alt={"Error!"}/>
                 <p>{props.error && props.error.message}</p>
             </div>
         </div>
